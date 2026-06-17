@@ -56,3 +56,14 @@ Standard base frequencies lose accuracy or hit limits during massive context win
 
 ## 🔍 SEO Keywords
 `RoPE`, `Rotary Position Embedding`, `Transformers`, `LLMs`, `Context Extension`, `NTK-aware`, `YaRN`, `Position Interpolation`, `AI`, `Machine Learning`, `Neural Networks`
+
+## 📈 Star History
+<div align="center">
+   <a href="https://www.star-history.com/#ishandutta2007/Awesome-RoPE&type=date&legend=bottom-right">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-RoPE&type=date&theme=dark&legend=bottom-right" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-RoPE&type=date&legend=bottom-right" />
+      <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-RoPE&type=date&legend=bottom-right" />
+    </picture>
+   </a>
+</div>
