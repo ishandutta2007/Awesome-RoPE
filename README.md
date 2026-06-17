@@ -1,9 +1,28 @@
 # Awesome-RoPE
-## Rotary Position Embedding (RoPE) Variants
 
-Rotary Position Embedding (RoPE) encodes positional information by applying a rotation in a 2D complex plane. It pairs dimensions of the Query and Key vectors and rotates them by an angle proportional to the token's position, preserving relative distances regardless of absolute placement.
+<div align="center">
+  <img src="assets/banner.svg" alt="Awesome RoPE Banner" width="800">
 
-## 1. Standard RoPE (Base RoPE)
+  <p>
+    <a href="https://github.com/ishandutta2007/Awesome-RoPE/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-RoPE?style=for-the-badge" alt="Stars"></a>
+    <a href="https://github.com/ishandutta2007/Awesome-RoPE/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-RoPE?style=for-the-badge" alt="Forks"></a>
+    <a href="https://github.com/ishandutta2007/Awesome-RoPE/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-RoPE?style=for-the-badge" alt="Issues"></a>
+    <a href="https://github.com/ishandutta2007/Awesome-RoPE/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-RoPE?style=for-the-badge" alt="License"></a>
+    <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow&style=for-the-badge" /></a>
+  </p>
+
+  **A curated list of Rotary Position Embedding (RoPE) variants and adaptations for Transformers.**
+
+  ---
+</div>
+
+## 📚 Overview
+
+Rotary Position Embedding (RoPE) 🌀 encodes positional information by applying a rotation in a 2D complex plane. It pairs dimensions of the Query and Key vectors and rotates them by an angle proportional to the token's position, preserving relative distances regardless of absolute placement.
+
+---
+
+## 🚀 1. Standard RoPE (Base RoPE)
 | Feature | Description | Year | Paper Link |
 | :--- | :--- | :--- | :--- |
 | [**Definition**](variants/standard_rope_definition.md) | The original RoFormer method introduced by Su et al. | 2021 | [arXiv:2104.09864](https://arxiv.org/abs/2104.09864) |
@@ -11,7 +30,7 @@ Rotary Position Embedding (RoPE) encodes positional information by applying a ro
 | [**Frequencies**](variants/standard_rope_frequencies.md) | The rotation angles are based on exponentially decaying geometric frequencies. | 2021 | [arXiv:2104.09864](https://arxiv.org/abs/2104.09864) |
 | [**Core Benefit**](variants/standard_rope_core_benefit.md) | Attention scores depend entirely on the relative distance between tokens, improving language modeling. | 2021 | [arXiv:2104.09864](https://arxiv.org/abs/2104.09864) |
 
-## 2. Context Extension Variants
+## 📏 2. Context Extension Variants
 Standard base frequencies lose accuracy or hit limits during massive context windows. These variants scale frequencies to handle longer inputs:
 
 | Variant | Description | Year | Paper Link |
@@ -20,15 +39,20 @@ Standard base frequencies lose accuracy or hit limits during massive context win
 | [**YaRN**](variants/yarn.md) | Extends context limits (e.g., 128k+ tokens) using RoPE interpolation and an NTK-scaling factor to recover lost performance with minimal fine-tuning. | 2023 | [arXiv:2309.00071](https://arxiv.org/abs/2309.00071) |
 | [**Linear Interpolation RoPE (PI)**](variants/pi_rope.md) | Linearly compresses position indices to fit longer texts into the model's originally trained context window. | 2023 | [arXiv:2306.15595](https://arxiv.org/abs/2306.15595) |
 
-## 3. Modality & Architectural Adaptations
+## 🎨 3. Modality & Architectural Adaptations
 | Variant | Description | Year | Paper Link |
 | :--- | :--- | :--- | :--- |
 | [**2D RoPE**](variants/2d_rope.md) | Adapts 1D text embedding into a 2D plane for Vision Transformers (ViTs) to capture horizontal and vertical coordinate shifts independently. | 2024 | [arXiv:2403.13298](https://arxiv.org/abs/2403.13298) |
 | [**VRoPE (Video RoPE)**](variants/vrope.md) | Adds a third temporal dimension to the rotation for frame sequence tracking in Video-LLMs. | 2025 | [arXiv:2502.11664](https://arxiv.org/abs/2502.11664) |
 | [**Circle-RoPE**](variants/circle_rope.md) | Decoupled rotary embeddings for Large Vision-Language Models to better handle aspect ratio changes and multi-resolution visual inputs. | 2025 | [arXiv:2505.16416](https://arxiv.org/abs/2505.16416) |
 
-## 4. Advanced & Parameterized Variants
+## 🛠️ 4. Advanced & Parameterized Variants
 | Variant | Description | Year | Paper Link |
 | :--- | :--- | :--- | :--- |
 | [**ComRoPE**](variants/comrope.md) | Uses learnable commuting angle matrices instead of strict fixed sinusoidal frequencies, allowing the model to adaptively learn optimal positional intervals. | 2025 | [arXiv:2506.03737](https://arxiv.org/abs/2506.03737) |
 | [**Context-aware RoPE**](variants/context_aware_rope.md) | Dynamically adjusts rotational angles based on semantic content or token importance to focus more on contextually heavy phrases. | 2025 | [arXiv:2507.23083](https://arxiv.org/abs/2507.23083) |
+
+---
+
+## 🔍 SEO Keywords
+`RoPE`, `Rotary Position Embedding`, `Transformers`, `LLMs`, `Context Extension`, `NTK-aware`, `YaRN`, `Position Interpolation`, `AI`, `Machine Learning`, `Neural Networks`
